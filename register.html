@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registrarse - Encuentra tu Ruta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom styles (incluyendo colores y estilos Yovoy) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body">
+
+    <!-- Navbar Yovoy -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-yovoy shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo_yovoy.png" alt="Yovoy Logo" class="logo-yovoy me-2">
+                <span>Yovoy Aguascalientes</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <!-- Tarjeta de Registro -->
+                <div class="card shadow animate__animated animate__fadeIn">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-center mb-4 text-yovoy">Registrarse</h2>
+
+                        <!-- Formulario de Registro -->
+                        <form id="registerForm">
+                            <!-- Nombre -->
+                            <div class="mb-3">
+                                <label for="regName" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="regName" required>
+                            </div>
+
+                            <!-- Apellidos -->
+                            <div class="mb-3">
+                                <label for="regLastName" class="form-label">Apellidos</label>
+                                <input type="text" class="form-control" id="regLastName" required>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="mb-3">
+                                <label for="regPhone" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="regPhone" required>
+                            </div>
+
+                            <!-- Correo -->
+                            <div class="mb-3">
+                                <label for="regEmail" class="form-label">Correo</label>
+                                <input type="email" class="form-control" id="regEmail" required>
+                            </div>
+
+                            <!-- Contraseña -->
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label">Contraseña (min. 8 caracteres)</label>
+                                <input type="password" class="form-control" id="regPassword" required>
+                                <small id="passwordHelp" class="text-muted"></small>
+                            </div>
+
+                            <!-- Captcha local -->
+                            <div class="mb-3">
+                                <label for="captchaResult" class="form-label" id="captchaQuestion"></label>
+                                <input type="number" class="form-control" id="captchaResult" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-yovoy w-100">Crear Cuenta</button>
+                        </form>
+
+                        <!-- Enlace para ir a Iniciar Sesión -->
+                        <p class="text-center mt-3">
+                            ¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Fin Tarjeta -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-yovoy text-white text-center p-2 fixed-bottom">
+        <small>&copy; 2025 Yovoy Aguascalientes</small>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- script.js (maneja captcha, verificador de contraseña y lógica de registro) -->
+    <script src="script.js"></script>
+</body>
+
+</html>

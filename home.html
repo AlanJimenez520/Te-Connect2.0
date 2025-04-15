@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Encuentra tu Ruta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+
+    <!-- SweetAlert2 (no integrity) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Leaflet CSS (sin integrity ni crossorigin) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-yovoy shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/logo_yovoy.png" alt="Yovoy Logo" class="logo-yovoy me-2">
+                <span>Yovoy Aguascalientes</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="card shadow animate__animated animate__fadeIn">
+            <div class="card-body text-center">
+                <h2 class="text-yovoy mb-3">Bienvenido</h2>
+                <p id="userInfo" class="mb-4">Cargando información...</p>
+                <button class="btn btn-warning mb-4" id="requestCodeBtn">Solicitar Código de Acceso al Chat</button>
+                <div class="whatsapp-buttons my-3">
+                    <button class="btn btn-success me-2 chat-btn" data-ruta="50">Chat WhatsApp - Ruta 50</button>
+                    <button class="btn btn-success chat-btn" data-ruta="25">Chat WhatsApp - Ruta 25</button>
+                </div>
+                <button class="btn btn-danger" id="logoutBtn">Cerrar Sesión</button>
+            </div>
+        </div>
+
+        <!-- Sección para el mapa Leaflet -->
+        <div class="card shadow mt-4">
+            <div class="card-body">
+                <h3 class="text-center text-yovoy">Mapa de Rutas en Aguascalientes</h3>
+                <p class="text-muted text-center">Visualiza tu ubicación actual y las rutas 25 y 50.</p>
+                <div id="map" class="leaflet-map"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer bg-yovoy text-white text-center p-2">
+        <small>&copy; 2025 Yovoy Aguascalientes</small>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet JS (sin integrity ni crossorigin) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- script.js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
